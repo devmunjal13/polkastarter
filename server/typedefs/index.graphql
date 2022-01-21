@@ -1,0 +1,12 @@
+scalar Date
+
+type Query {
+  allIdos: [Ido!]!
+  ido(id: String): Ido
+}
+
+type Mutation {
+  createIdo(ido: CreateIdoInput!): Ido!
+  updateIdo(id: String!, ido: UpdateIdoInput): Ido!
+  deleteIdo(id: String!): Ido!
+}

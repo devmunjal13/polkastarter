@@ -1,0 +1,40 @@
+type Ido implements Timestamps {
+  id: String!
+  productLogo: String
+  productName: String!
+  description: String
+  images: String
+  price: String!
+  tokenAddress: String
+  contractAddress: String
+  vestingSchedule: String
+  guid: String
+  status: String
+  listed: Boolean
+  metaData: String
+  created_at: Date!
+  updated_at: Date!
+}
+
+input CreateIdoInput {
+  productLogo: String
+  productName: String!
+  description: String
+  images: String
+  price: String!
+  tokenAddress: String!
+  contractAddress: String
+  vestingSchedule: String
+  status: String
+  listed: Boolean
+  metaData: String
+}
+
+input UpdateIdoInput {
+  productLogo: String
+  description: String
+  images: String
+  status: String
+  listed: Boolean
+  metaData: String
+}

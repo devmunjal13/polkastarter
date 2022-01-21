@@ -1,0 +1,36 @@
+generator client {
+provider = "prisma-client-js"
+}
+
+datasource db {
+provider = "postgresql"
+url = env("DATABASE_URL")
+}
+
+model Ido {
+id String @id @map("_id") @db.Uuid
+productLogo String?
+productName String
+description String?
+images String?
+price String
+tokenAddress String?
+contractAddress String?
+vestingSchedule String?
+created_at DateTime @db.Date
+updated_at DateTime @db.Date
+guid String? @db.Uuid
+status String?
+listed Boolean?
+metaData String?
+}
+
+model user {
+id String @id @map("_id") @db.Uuid
+guid String
+email String
+name String
+password String
+created_at DateTime @db.Date
+updated_at DateTime @db.Date
+}
