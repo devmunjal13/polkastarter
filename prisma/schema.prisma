@@ -4,7 +4,8 @@ provider = "prisma-client-js"
 
 datasource db {
 provider = "postgresql"
-url = env("DATABASE_URL")
+url = "postgresql://ntueytrvqiimtl:037d67c40830165c150282f7bad3055a86e75c4cc0ada9e68bebbd0076bc0ae7@ec2-54-224-64-114.compute-1.amazonaws.com:5432/d2t6t22nbd60hc"
+
 }
 
 model Ido {
