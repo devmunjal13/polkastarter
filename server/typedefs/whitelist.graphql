@@ -1,0 +1,17 @@
+type Whitelist implements Timestamps {
+  id: String!
+  ido: Ido!
+  contractAddress: String!
+  metaData: String
+  created_at: Date!
+  updated_at: Date!
+}
+
+input CreateWhiteListInput {
+  contractAddress: String!
+  metaData: String
+}
+
+input UpdateWhiteListInput {
+  metaData: String
+}

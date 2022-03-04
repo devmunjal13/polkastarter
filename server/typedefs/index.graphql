@@ -3,10 +3,15 @@ scalar Date
 type Query {
   allIdos: [Ido!]!
   ido(id: String): Ido
+  whiteLists: [Whitelist!]!
+  whiteList(id: String): Whitelist
 }
 
 type Mutation {
   createIdo(ido: CreateIdoInput!): Ido!
   updateIdo(id: String!, ido: UpdateIdoInput): Ido!
   deleteIdo(id: String!): Ido!
+  createWhitelist(whitelist: CreateWhiteListInput!): Whitelist!
+  updateWhitelist(id: String!, whitelist: UpdateWhiteListInput): Whitelist!
+  deleteWhiteList(id: String!): Whitelist!
 }

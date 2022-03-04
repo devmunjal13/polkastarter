@@ -24,7 +24,18 @@ guid String? @db.Uuid
 status String?
 listed Boolean?
 metaData String?
+whitelist Whitelist[]
 }
+
+model Whitelist {
+id String @id @map("_id") @db.Uuid
+ido Ido @relation(fields: [id], references: [id])
+contractAddress String
+metaData String?
+created_at DateTime @db.Date
+updated_at DateTime @db.Date
+}
+
 
 model user {
 id String @id @map("_id") @db.Uuid
