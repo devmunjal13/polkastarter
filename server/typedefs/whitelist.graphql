@@ -1,6 +1,6 @@
 type Whitelist implements Timestamps {
   id: String!
-  ido: Ido!
+  ido: String!
   contractAddress: String!
   metaData: String
   created_at: Date!
