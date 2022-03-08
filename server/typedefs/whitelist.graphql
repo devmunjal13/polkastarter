@@ -10,7 +10,7 @@ type Whitelist implements Timestamps {
 input CreateWhiteListInput {
   contractAddress: String!
   metaData: String
-  ido:ID
+  ido:String
 }
 
 input UpdateWhiteListInput {
